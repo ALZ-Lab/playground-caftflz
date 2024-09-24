@@ -5,6 +5,7 @@
 # -e topology_file=/tf/caf/landingzones/templates/platform/alz_single_subscription.yaml \
 # -e config_folder_platform_templates=/tf/caf/landingzones/templates/platform \
 # -e landingzones_folder=/tf/caf/landingzones \
+# -e platform_configuration_folder=/tf/caf/configuration \
 # -e destination_base_path=/tf/caf \
 # -e definitions_relative_path=definitions/v1 \
 # -e configuration_relative_path=configuration/demo
@@ -36,19 +37,19 @@
     - name: alz_mg_name
       prompt: Management group name
       private: no
-      default: Contoso
+      default: rrlab
 
     - name: default_email_address
       prompt: Email address to send all notifications
       private: no
-      default: email@address.com
+      default: stanley.xie@retrorider.work
 
     - name: azure_regions
       prompt: Azure regions (lowercase, short version)
       private: no
       default:
-        region1: australiaeast
-        region2: australiacentral
+        region1: westeurope
+        region2: westeurope
 
     - name: default_region_key
       prompt: Default CAF Azure region key

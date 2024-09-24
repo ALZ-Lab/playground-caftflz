@@ -6,13 +6,13 @@
     - name: "Set variables"
       set_fact:
         job_cache_base_path: "/home/vscode/.terraform.cache"
-        destination_base_path: '{{ platform_configuration_folder }}'
-        resource_template_folder: "{{ public_templates_folder }}/resources"
-        platform_service_folder: "{{ private_templates_folder if private_templates_folder is defined else public_templates_folder + '/platform/services' }}"
+        #destination_base_path: '{{ platform_configuration_folder }}'
+        #resource_template_folder: "{{ public_templates_folder }}/resources"
+        #platform_service_folder: "{{ private_templates_folder if private_templates_folder is defined else public_templates_folder + '/platform/services' }}"
         multiple_lines_list: "{{ multiple_lines_list | default(false) }}"
 
-    - debug:
-        msg: "platform_service_folder is: {{platform_service_folder}}"
+    #- debug:
+    #    msg: "platform_service_folder is: {{platform_service_folder}}"
 
     - name: "load {{ template_folder | default(platform_definition_folder)}}/ignite.yaml"
       include_vars:

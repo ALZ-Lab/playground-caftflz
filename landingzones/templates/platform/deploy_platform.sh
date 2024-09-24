@@ -12,7 +12,7 @@ echo "sub_management: ${sub_management}"
 ansible-playbook /tf/caf/landingzones/templates/ansible/walk-through-bootstrap.yaml \
   -e public_templates_folder=/tf/caf/landingzones/templates \
   -e landingzones_folder=/tf/caf/landingzones \
-  -e platform_configuration_folder=/tf/caf/configuration \
+#  -e platform_configuration_folder=/tf/caf/configuration \
   -e platform_definition_folder=/tf/caf/platform/definition \
   -e platform_template_folder=/tf/caf/platform/template \
   -e template_folder=/tf/caf/landingzones/templates/platform \
